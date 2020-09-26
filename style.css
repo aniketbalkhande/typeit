@@ -1,0 +1,51 @@
+.container{
+    border: 5px violet;
+    background-color:white ;
+    text-align: center;
+    align-content: center;
+    margin-top: 40px;
+    width: 50%;
+    height: auto;
+    border: 10px  blue ;
+    
+}
+body{
+    background-color:black;
+}
+#styleTime, #styleScore{
+    font-size: larger;
+    background-color: red;
+    color:black;
+    padding: 10px 25px;
+    margin: 10px;
+    font-weight: bolder;
+}
+#massage{
+    font-size: 50px;
+}
+/* @media only screen and (max-width : 600px) {
+    .mobile {
+      font-size: 3rem;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .logo img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    #box {
+      margin: 0 5px;
+      border: dashed 7px #007BFF;
+    }
+} */
+.correct{
+  color: green;
+}
+.incorrect{
+  color: red;
+  text-decoration : underline;
+}

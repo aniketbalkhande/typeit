@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>typeit</title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="top">
+            <button id="medium">Medium</button>
+            <button id="hard">Hard</button>
+            <button id="start" class="btn btn-success">START</button>
+        </div>
+        <div class="row">           
+            <div class="col-md-12">
+                <!-- p tag to show the seconds -->
+                <p class="lead">Type the given word within<span style="font-size: larger;"
+            class="text-success" id="seconds">5</span>Seconds:</p>                
+                
+                <!-- H2 tag to display the word to type -->
+                <h2 class="display-2 mb-5" id="current-word"></h2>
+                <!-- input tag to get user input for the given word  -->
+                <input type="text" class="form-control form-control-lg" id="word-input"  placeholder="Start typing..." autofocus>        
+                <!-- h4 tag to give message  -->
+                <h4 id="message"></h4>
+            </div>
+        </div>
+
+        <div id="bottom" class="row">
+            <div class="col-md-4">
+                <h4 id="styleTime">Time Left:<span id="time"></span></h4>
+            </div>
+            <div class="col-md-4">
+                <h4 id="styleScore" >Score:<span id="score">0</span></h4>
+            </div>
+            <div class="col-md-4">
+                <h4 id="styleScore" >Best:<span id="highScore"></span></h4>
+            </div>
+        </div>
+    </div>
+    <script src="demo.js"></script>
+</body>
+</html>
