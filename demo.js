@@ -7,7 +7,6 @@ const levels = {
     hard: 3
 };
 
-
 //Globals
 let currentLevel = levels.easy;
 let time = currentLevel;
@@ -51,31 +50,29 @@ const styleTime = document.querySelector('#styleTime');
 
 
 const words = [
-    'hat',
+    'Hat',
     'chata',
-    'chotabheem',
-    'kangaroo',
-    'dolphin',
-    'batman',
-    'captain',
-    'ironman',
-    'godofthunder',
-    'mightyThor',
-    'wolfofwallstreet',
-    'romero',
-    'tiger',
-    'alibaba',
-    'jakarta',
-    'penselvenia',
-    'vibranium',
-    'jakarta',
-    'blackwidow',
-    'rajkumar',
-    'force',
-    'bandu',
-    'book',
-    'pen',
-    'car'
+    'ChotaBheem',
+    'Kangaroo',
+    'Dolphin',
+    'Batman',
+    'CaptainAmerica',
+    'IronMan',
+    'GodOfThunder',
+    'MightyThor',
+    'WolfOfWallStreet',
+    'Tiger',
+    'Alibaba',
+    'Jakarta',
+    'Penselvenia',
+    'Vibranium',
+    'BlackWidow',
+    'RajKumar',
+    'Force',
+    'SevenDeadlySins',
+    'BlackBook',
+    'OnePunchMan',
+    'Car'
 ];
 
 //initialize Game 
@@ -167,7 +164,7 @@ function checkStatus(){
     }
     else if(time>0)
     {   
-        message.innerHTML = 'GO GO /////';
+        message.innerHTML = 'Go Go ///////';
     }
 }
 

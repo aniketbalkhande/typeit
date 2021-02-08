@@ -1,47 +1,57 @@
 .container{
-    border: 5px violet;
-    background-color:white ;
+    /* border: 5px violet; */
+    background-color: rgb(171, 250, 250) ;
     text-align: center;
     align-content: center;
     margin-top: 40px;
     width: 50%;
     height: auto;
-    border: 10px  blue ;
+    /* border: 10px  blue ; */
     
 }
 body{
     background-color:black;
 }
-#styleTime, #styleScore{
-    font-size: larger;
-    background-color: red;
-    color:black;
-    padding: 10px 25px;
-    margin: 10px;
-    font-weight: bolder;
+#top {
+  padding: 15px;
+  /* margin-bottom: 5px; */
 }
-#massage{
-    font-size: 50px;
+#top button {
+  padding: 3px 5px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 2px;
 }
-/* @media only screen and (max-width : 600px) {
-    .mobile {
-      font-size: 3rem;
+p span {
+  color: green;
+  margin: 0 5px;
+}
+
+h2 {
+  color: rgb(250, 10, 102);
+}
+h4 {
+  font-size: 25px;
+  padding: 10px;
+  margin-bottom: -5px;
+}
+
+ #bottom .row div h4 {
+  background-color: blue;
+  margin: 15px  2px;
+  color: #fff;
+  letter-spacing: 0.1ch;
+  font-weight: bolder;
+}
+#bottom .row div h4 span {
+  margin: 0 10px;
+} 
+
+@media only screen and (max-width : 1000px) {
+    h2 {
+      font-size: 30px;
     }
-  
-    .heading {
-      font-size: 2rem;
-    }
-  
-    .logo img {
-      width: 100px;
-      height: 100px;
-    }
-  
-    #box {
-      margin: 0 5px;
-      border: dashed 7px #007BFF;
-    }
-} */
+}
 .correct{
   color: green;
 }
