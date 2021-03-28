@@ -1,54 +1,4 @@
 window.addEventListener('load', init);
-
-//different levels
-const levels = {
-    easy: 6,
-    medium: 4,
-    hard: 3
-};
-
-//Globals
-let currentLevel = levels.easy;
-let time = currentLevel;
-let score = 0;
-let isPlaying;
-
-//DOM Elements
-const wordInput = document.querySelector('#word-input');
-const currentWord = document.querySelector('#current-word');
-const scoreDisplay = document.querySelector('#score');
-const timeDisplay = document.querySelector('#time');
-const message = document.querySelector('#message');
-const seconds = document.querySelector('#seconds');
-const styleScore = document.querySelector('#styleScore');
-const styleTime = document.querySelector('#styleTime');
-
-
-
-    wordInput.addEventListener('input',()=>{
-        const arrayOfCharactor = currentWord.innerHTML.split('');
-        const arrayOfValue = wordInput.value.split('');
-        // console.log(arrayOfCharactors)
-
-        arrayOfValue.forEach((charactorSpan, index) =>  {
-        const charactor = arrayOfValue[index];
-        if (charactor === null) {
-            charactorSpan.classList.remove('correct');
-            charactorSpan.classList.remove('incorrect');
-
-        }else if(charactor === charactorSpan.innerText){
-            charactorSpan.classList.add('correct');
-            charactorSpan.classList.remove('incorrect');
-        }
-        else{
-            charactorSpan.classList.remove('correct');
-            charactorSpan.classList.add('incorrect');
-
-        }
-    })
-});
-
-
 const words = [
     'Hat',
     'chata',
@@ -74,19 +24,99 @@ const words = [
     'OnePunchMan',
     'Car'
 ];
+//DOM Elements
+const easy = document.querySelector('#easy');
+const medium = document.querySelector('#medium');
+const hard = document.querySelector('#hard');
+const start = document.querySelector('#start');
+const wordInput = document.querySelector('#word-input');
+const currentWord = document.querySelector('#current-word');
+const scoreDisplay = document.querySelector('#score');
+const timeDisplay = document.querySelector('#time');
+const message = document.querySelector('#message');
+const seconds = document.querySelector('#seconds');
+const styleScore = document.querySelector('#styleScore');
+const styleTime = document.querySelector('#styleTime');
+
+//different levels
+const levels = {
+    easy: 6,
+    medium: 5,
+    hard: 4
+};
+
+//Globals
+let currentLevel=levels.easy;
+let time=currentLevel;
+let score = 0;
+let isPlaying;
+
+// easy.addEventListener('click',()=>{
+//     currentLevel = levels.easy;
+//     document.getElementById('easy').style.backgroundColor = 'red';
+//     document.getElementById('medium').style.backgroundColor = '#fff';
+//     document.getElementById('hard').style.backgroundColor = '#fff';
+
+//     time =  currentLevel;
+//     seconds.innerHTML = currentLevel;
+
+// });
+// medium.addEventListener('click',()=>{
+//     currentLevel = levels.medium;
+//     document.getElementById('easy').style.backgroundColor = '#fff';
+//     document.getElementById('medium').style.backgroundColor = 'red';
+//     document.getElementById('hard').style.backgroundColor = '#fff';
+//     time =  currentLevel;
+
+//     seconds.innerHTML = currentLevel;
+// });
+// hard.addEventListener('click',()=>{
+//     currentLevel = levels.hard;
+//     document.getElementById('easy').style.backgroundColor = '#fff';
+//     document.getElementById('medium').style.backgroundColor = '#fff';
+//     document.getElementById('hard').style.backgroundColor = 'red';
+
+//     time =  currentLevel;
+
+//     seconds.innerHTML = currentLevel;
+// });
+
+// start.addEventListener('click', init);
+// console.log(time);
+
+wordInput.addEventListener('input',()=>{
+    const arrayOfCharactor = currentWord.innerHTML.split('');
+    const arrayOfValue = wordInput.value.split('');
+
+    arrayOfValue.forEach((charactorSpan, index) =>  {
+    const charactor = arrayOfValue[index];
+    if (charactor === null) {
+        charactorSpan.classList.remove('correct');
+        charactorSpan.classList.remove('incorrect');
+
+    }else if(charactor === charactorSpan.innerText){
+        charactorSpan.classList.add('correct');
+        charactorSpan.classList.remove('incorrect');
+    }
+    else{
+        charactorSpan.classList.remove('correct');
+        charactorSpan.classList.add('incorrect');
+    }
+})
+});
 
 //initialize Game 
 function init()
 { 
-    seconds.innerHTML = currentLevel;
-    
+    // seconds.innerHTML = currentLevel;
+
     showWord(words);
+
     wordInput.addEventListener('input',startMatch);
 
     wordInput.addEventListener('input', ()=> {
      
     })
-
 
     setInterval(countdown, 1000);
 
@@ -101,7 +131,6 @@ function startMatch(){
        showWord(words);
        wordInput.value = '';
        score++;
-    
     }
     //if score is -1 then set it to 0
     if(score === -1){
@@ -133,8 +162,6 @@ function showWord(words){
     //output random word
     currentWord.innerHTML = words[randIndex];   
 }
-
-
 
 
 //Countdown Timer

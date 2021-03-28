@@ -1,55 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico">
     <title>typeit</title>
 </head>
 <body>
 
-    <div class="container">
-        <div id="top">
-            <button id="medium">Medium</button>
-            <button id="hard">Hard</button>
-            <button id="start" style="background-color: rgb(134, 243, 134);">START</button>
-        </div>
-        <div class="row">           
-            <div class="col-md-12">
-                <!-- p tag to show the seconds -->
-                <p class="lead">Type the given word within<span style="font-size: larger;" id="seconds">5</span>Seconds:</p>                
-                
-                <!-- H2 tag to display the word to type -->
-                <h2 class="display-2 mb-5" id="current-word"></h2>
-                <!-- input tag to get user input for the given word  -->
-                <input type="text" class="form-control form-control-lg" id="word-input"  placeholder="Start typing..." autofocus>        
-                <!-- h4 tag to give message  -->
-                <h4 id="message"></h4>
+    <div class="container-fluid">
+        <div class="wrapper">
+            <div id="top">
+                <button id="easy">Easy</button>
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
+                <button id="start">START</button>
             </div>
-        </div>
+    
+            <div class="row">           
+                <div class="col-md-12">
+                    <p >Type the given word within<span style="font-size: larger;" id="seconds">5</span>seconds : )</p>              
 
-        <div id="bottom">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4 id="styleTime"><span id="time"></span></h4>
+                    <div class="word-wrapper">
+                        <h2 id="current-word"></h2>
+                    </div>
+    
+                    <input type="text" class="form-control form-control-lg" id="word-input"  placeholder="Start typing..." autofocus>        
+                    <div class="message-wrapper">
+                        <span id="message"></span>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h4 id="styleScore" >Score:<span id="score">0</span></h4>
-                </div>
-                <div class="col-md-4">
-                    <h4 id="styleScore" >Best:<span id="highScore"></span></h4>
+            </div>
+    
+            <div id="bottom">
+                <div class="row">
+                    <div class="col-4">
+                        <h4 id="styleTime"><span id="time"></span></h4>
+                    </div>
+                    <div class="col-4">
+                        <h4 id="styleScore" class="currentScore" >Score:<span id="score">0</span></h4>
+                    </div>
+                    <div class="col-4">
+                        <h4 id="styleScore" class="bestScore" >Best:<span id="highScore"></span></h4>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </div>
 
-    <script src="demo.js"></script>
-    <script href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-</body>
+
+
+    <script src="demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
